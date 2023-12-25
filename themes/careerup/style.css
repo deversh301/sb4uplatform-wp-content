@@ -1,0 +1,337 @@
+/*
+Theme Name: Careerup
+Theme URI: https://themeforest.net/item/careerup-job-board-wordpress-theme/24002090
+Author: ApusTheme
+Author URI: https://themeforest.net/user/apustheme
+Description: Careerup is clean theme, it's used Apus Framework.
+Version: 2.3.35
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: careerup
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+img{
+    max-width: 100%;
+    height:auto;
+ }
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    clear: both;
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 32px 2em;
+}
+.wp-block-image .alignright{
+    margin-left: 2em;
+}
+.alignleft {
+    float: left;
+    margin: 5px 2em 32px 0;
+}
+.wp-block-image .alignleft{
+    margin-right: 2em;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+figcaption{
+    margin-top: 1em;
+}
+.wp-caption {
+    background: #fff;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+.gallery-caption {
+    box-sizing: border-box;
+}
+.bypostauthor{
+    box-sizing: border-box;
+}
+.wp-block-pullquote{
+    border:none;
+}
+.wp-block-archives.aligncenter, .wp-block-categories.aligncenter, .wp-block-latest-posts.aligncenter {
+    text-align: center;
+}
+.employer-detail-video iframe, .candidate-detail-video iframe {
+    width: 100%;
+}
+
+/* job/candidate widget */
+.job-list.job-list-small {
+    padding: 10px;
+}
+.job-list.job-list-small .employer-logo {
+    border: none;
+    padding: 0;
+    width: 100px;
+}
+.job-list.job-list-small .job-metas > div {
+    margin-right: 0px;
+}
+.job-list .job-information {
+    padding-left: 20px;
+}
+.candidate-list.candidate-list-small {
+    padding: 10px;
+}
+.candidate-list.candidate-list-small .info > div {
+    margin-right: 0px;
+}
+.candidate-list.candidate-list-small .candidate-thumbnail + .inner-left {
+    padding-left: 20px;
+}
+
+.employer-list.employer-list-small {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.employer-list.employer-list-small .employer-thumbnail {
+    width: 100px;
+    border: none;
+    padding: 0;
+}
+.employer-list.employer-list-small .employer-thumbnail + .right-content {
+    padding-left: 20px;
+    width: calc(100% - 100px);
+}
+
+.cmb-form .cmb-field-list > .cmb-row.cmb2-id--employer-profile-url {
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    .cmb-form .cmb-row[data-fieldtype="pw_map"] .cmb-td input:not([type=hidden])+input{
+        margin-right: 0px !important;
+    }
+}
+
+.tax-radios-field .form-group-inner .terms-list.level-0, .tax-checklist-field .form-group-inner .terms-list.level-0 {
+    max-height: 195px;
+    overflow: hidden;
+    padding:0;
+}
+
+.elementor-widget-container .widget-job-search-form .search_distance_wrapper, .widget_apus_candidate_simple_search .form-group-center-location .search_distance_wrapper, .widget_apus_job_simple_search .form-group-center-location .search_distance_wrapper {
+    display: none;
+}
+
+/* new */
+.btn-action-icon.approve {
+    background: #93cf49;
+    color: #fff;
+}
+.btn-action-icon.btn-undo-approve-job-applied.approve {
+    background: #f0ad4e;
+}
+.application-status-label.label {
+    padding: 0.4em 0.6em 0.3em;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+.job-table > tbody > tr > td.job-table-actions {
+    text-align: right;
+}
+.btn-action-icon.mark_filled {
+    color: #fff;
+    background: #a5d664;
+}
+.btn-action-icon.mark_not_filled {
+    color: #fff;
+    background: #aa7343;
+}
+.job-table .pending_approve {
+    color: #f0ad4e;
+}
+.job-table .pending_payment {
+    color: #bbb;
+}
+.job-table .job-title-wrapper .job-title {
+    color: #6a6a6a;
+}
+.widget-title .view_all {
+    font-weight: 500;
+    display: inline-block;
+    font-size: 14px;
+}
+.widget-title .view_all i {
+    margin-left: 10px;
+}
+.cmb-form .cmb-type-pw-taxonomy-multiselect .select2-container,  .cmb-form .cmb-type-pw-multiselect .select2-container  {
+    min-height: 50px;
+    height: auto;
+}
+.cmb-form .select2-container .select2-selection--multiple {
+    min-height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid #dddddd;
+    background: #fff !important;
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.09);
+}
+.cmb-form .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #dddddd;
+    outline: 0;
+}
+.cmb-form .select2-container--focus .select2-selection--single {
+    outline: 0;
+}
+.cmb2-wrap input:focus, .cmb2-wrap textarea:focus {
+    outline: 0;
+}
+.cmb-form .select2-container .select2-selection--multiple .select2-selection__rendered {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 40px;
+    padding: 5px 20px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    line-height: 26px;
+}
+
+/*fix mobile*/
+@media(max-width: 991px){
+    .sidebar{
+        padding-bottom: 80px;
+    }
+}
+.phone-wrapper.phone-hide a.phone{
+    display: none;
+}
+.phone-wrapper.phone-hide .phone-show{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.phone-wrapper.phone-hide .phone-show span{
+    display: inline-block;
+    font-size: 11px;
+    padding: 5px 10px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.phone-wrapper.phone-hide.show a.phone{
+    display: inline-block;
+}
+.phone-wrapper.phone-hide.show .phone-show{
+    display: none;
+}
+
+[class*="detail-video"] .content-bottom {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+[class*="detail-video"] .content-bottom iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-social-login .google-login-btn.google-login-new {
+    padding: 0;
+    text-align: left;
+    background: #fff !important;
+}
+.wrapper-social-login .inner-social > div:nth-child(3) {
+    clear: both;
+}
+
+.wp-job-board-uploaded-file .wp-job-board-uploaded-file-preview img {
+    max-width: 180px;
+}

@@ -1,0 +1,134 @@
+
+---Downloaded files---
+The import files for: Home 7 were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://sb4uplatform.com/dev
+Data file = /home/sb4uplatform/public_html/dev/wp-content/themes/careerup/inc/vendors/one-click-demo-import/default/dummy-data.xml
+Widget file = /home/sb4uplatform/public_html/dev/wp-content/themes/careerup/inc/vendors/one-click-demo-import/default/widgets.wie
+Customizer file = not defined!
+Redux files:
+careerup_theme_options -> /home/sb4uplatform/public_html/dev/wp-content/themes/careerup/inc/vendors/one-click-demo-import/default/redux-options7.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "Attachment Image" (Media)
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---ocdi/before_widgets_import---
+
+
+---Importing widgets---
+employer-profile-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Apus User Short Profile - No Title - Imported to Inactive
+
+candidate-profile-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Apus User Short Profile - No Title - Imported to Inactive
+Apus Custom Menu Widget - No Title - Imported to Inactive
+
+Jobs filter sidebar : 
+
+Job Filter - No Title - Imported
+
+Jobs filter top sidebar : 
+
+Job Simple Search - No Title - Imported
+
+Job single sidebar V1 : 
+
+Job Detail:: Information - Job Information - Imported
+Job Detail:: Statistics - No Title - Imported
+Job Detail::  Maps - Job Location - Imported
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+
+Job single sidebar V2 : 
+
+Job Detail:: Employer Information - No Title - Imported
+Job Detail:: Statistics - No Title - Imported
+Job Detail::  Maps - Job Location - Imported
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+
+Job single sidebar V3 : 
+
+Job Detail:: Information - Job Information - Imported
+Job Detail:: Social Share - No Title - Imported
+Job Detail:: People also viewed - People Also Viewed - Imported
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+
+Job single sidebar V4 : 
+
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+Job Detail:: Information - Job Information - Imported
+Job Detail::  Maps - Job Location - Imported
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+
+Job single sidebar V6 : 
+
+Job Detail:: Apply/Shortlist Buttons - No Title - Imported
+Job Detail:: Employer Information - No Title - Imported
+Job Detail:: Statistics - No Title - Imported
+Job Detail::  Maps - Job Location - Imported
+
+Employers filter sidebar : 
+
+Employer Filter - No Title - Imported
+
+Employer single sidebar : 
+
+Employer Detail:: Maps - Employer Location - Imported
+Employer Detail:: Information - Company Information - Imported
+Employer Detail:: Contact Form - Contact Form - Imported
+
+Candidates filter sidebar : 
+
+Candidate Filter - No Title - Imported
+
+Candidates filter top sidebar : 
+
+Candidate Simple Search - No Title - Imported
+
+Candidate single sidebar : 
+
+Candidate Detail:: Information - No Title - Imported
+Candidate Detail:: Social Profile - No Title - Imported
+Candidate Detail:: Candidate CV - Attachments - Imported
+Candidate Detail:: Contact Form - Contact Form - Imported
+
+User Profile sidebar : 
+
+Apus User Short Profile - No Title - Imported
+
+Blog sidebar : 
+
+Search - No Title - Imported
+Categories - Category - Imported
+Apus Recent Posts Widget - Recent Posts - Imported
+Meta - Meta - Imported
+Tag Cloud - Tags - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: careerup_theme_options finished successfully!
+
+---ocdi/after_import---
+
