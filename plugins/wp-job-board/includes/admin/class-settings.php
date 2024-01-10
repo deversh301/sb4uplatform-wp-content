@@ -83,16 +83,16 @@ class WP_Job_Board_Settings {
 	public function wp_job_board_get_settings_tabs() {
 		$tabs             	  = array();
 		$tabs['general']  	  = __( 'General', 'wp-job-board' );
-		$tabs['job_submission']   = __( 'Job Submission', 'wp-job-board' );
+		$tabs['job_submission']   = __( 'Fund Submission', 'wp-job-board' );
 		$tabs['pages']   = __( 'Pages', 'wp-job-board' );
-		$tabs['jobs_settings']   = __( 'Jobs Settings', 'wp-job-board' );
+		$tabs['jobs_settings']   = __( 'Funds Settings', 'wp-job-board' );
 		$tabs['employer_settings']   = __( 'Employer Settings', 'wp-job-board' );
-		$tabs['employee_settings']   = __( 'Employee Settings', 'wp-job-board' );
-		$tabs['candidate_settings']   = __( 'Candidate Settings', 'wp-job-board' );
+		// $tabs['employee_settings']   = __( 'Employee Settings', 'wp-job-board' );
+		// $tabs['candidate_settings']   = __( 'Candidate Settings', 'wp-job-board' );
 	 	$tabs['api_settings'] = __( 'Social API', 'wp-job-board' );
 	 	$tabs['recaptcha_api_settings'] = __( 'reCaptcha API', 'wp-job-board' );
 	 	$tabs['email_notification'] = __( 'Email Notification', 'wp-job-board' );
-	 	$tabs['indeed_job_import'] = __( 'Indeed Job Import', 'wp-job-board' );
+	 	// $tabs['indeed_job_import'] = __( 'Indeed Job Import', 'wp-job-board' );
 
 		return apply_filters( 'wp_job_board_settings_tabs', $tabs );
 	}
@@ -576,7 +576,7 @@ class WP_Job_Board_Settings {
 		// Jobs Settings
 		$wp_job_board_settings['jobs_settings'] = array(
 			'id'         => 'options_page',
-			'wp_job_board_title' => __( 'Jobs Settings', 'wp-job-board' ),
+			'wp_job_board_title' => __( 'Funds Settings', 'wp-job-board' ),
 			'show_on'    => array( 'key' => 'options-page', 'value' => array( $this->key, ), ),
 			'fields'     => apply_filters( 'wp_job_board_settings_jobs_settings', array(
 				
@@ -588,8 +588,8 @@ class WP_Job_Board_Settings {
 					'after_row'  => '<hr>'
 				),
 				array(
-					'name'    => __( 'Number jobs per page', 'wp-job-board' ),
-					'desc'    => __( 'Number of jobs to display per page.', 'wp-job-board' ),
+					'name'    => __( 'Number Funds per page', 'wp-job-board' ),
+					'desc'    => __( 'Number of Funds to display per page.', 'wp-job-board' ),
 					'id'      => 'number_jobs_per_page',
 					'type'    => 'text',
 					'default' => '10',
@@ -597,15 +597,15 @@ class WP_Job_Board_Settings {
 				
 
 				array(
-					'name' => __( 'Restrict Job settings', 'wp-job-board' ),
+					'name' => __( 'Restrict Fund settings', 'wp-job-board' ),
 					'type' => 'wp_job_board_title',
 					'id'   => 'wp_job_board_title_jobs_settings_restrict_job',
 					'before_row' => '<hr>',
 					'after_row'  => '<hr>'
 				),
 				array(
-					'name'    => __( 'Restrict Job Type', 'wp-job-board' ),
-					'desc'    => __( 'Select a restrict type for restrict job', 'wp-job-board' ),
+					'name'    => __( 'Restrict Fund Type', 'wp-job-board' ),
+					'desc'    => __( 'Select a restrict type for restrict fund', 'wp-job-board' ),
 					'id'      => 'job_restrict_type',
 					'type'    => 'select',
 					'options' => array(
@@ -615,8 +615,8 @@ class WP_Job_Board_Settings {
 					'default' => ''
 				),
 				array(
-					'name'    => __( 'Restrict Job Detail', 'wp-job-board' ),
-					'desc'    => __( 'Restrict Jobs detail page for all users except jobs.', 'wp-job-board' ),
+					'name'    => __( 'Restrict Fund Detail', 'wp-job-board' ),
+					'desc'    => __( 'Restrict Funds detail page for all users except jobs.', 'wp-job-board' ),
 					'id'      => 'job_restrict_detail',
 					'type'    => 'radio',
 					'options' => apply_filters( 'wp-job-board-restrict-job-detail', array(
@@ -628,8 +628,8 @@ class WP_Job_Board_Settings {
 					'default' => 'all',
 				),
 				array(
-					'name'    => __( 'Restrict Job Listing', 'wp-job-board' ),
-					'desc'    => __( 'Restrict Jobs Listing page for all users except jobs.', 'wp-job-board' ),
+					'name'    => __( 'Restrict Fund Listing', 'wp-job-board' ),
+					'desc'    => __( 'Restrict Funds Listing page for all users except jobs.', 'wp-job-board' ),
 					'id'      => 'job_restrict_listing',
 					'type'    => 'radio',
 					'options' => apply_filters( 'wp-job-board-restrict-job-listing', array(
@@ -641,7 +641,7 @@ class WP_Job_Board_Settings {
 					'default' => 'all',
 				),
 
-				// jobs fields
+				// Funds fields
 				array(
 					'name' => __( 'Fields settings', 'wp-job-board' ),
 					'type' => 'wp_job_board_title',
@@ -651,7 +651,7 @@ class WP_Job_Board_Settings {
 				),
 				// fields
 				array(
-					'name'              => __( 'Field: Job Title', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Title', 'wp-job-board' ),
 					'id'                => 'job_field_title',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -665,7 +665,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Title', 'wp-job-board' ),
 							'id'        => 'title',
 							'type'      => 'text',
-							'default' => 'Job Title',
+							'default' => 'Fund Title',
 						),
 						array(
 							'name'      => __( 'Placeholder', 'wp-job-board' ),
@@ -692,7 +692,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Description', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Description', 'wp-job-board' ),
 					'id'                => 'job_field_description',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -816,7 +816,7 @@ class WP_Job_Board_Settings {
 				),
 
 				array(
-					'name'              => __( 'Field: Job Types', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Types', 'wp-job-board' ),
 					'id'                => 'job_field_types',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -856,7 +856,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Filter Title', 'wp-job-board' ),
 							'id'        => 'filter_title',
 							'type'      => 'text',
-							'default'	=> 'Job Type'
+							'default'	=> 'Fund Type'
 						),
 						array(
 							'name'      => __( 'Filter Placeholder', 'wp-job-board' ),
@@ -906,7 +906,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Categories', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Categories', 'wp-job-board' ),
 					'id'                => 'job_field_category',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -946,7 +946,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Filter Title', 'wp-job-board' ),
 							'id'        => 'filter_title',
 							'type'      => 'text',
-							'default'	=> 'Job Category'
+							'default'	=> 'Fund Category'
 						),
 						array(
 							'name'      => __( 'Filter Placeholder', 'wp-job-board' ),
@@ -957,7 +957,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Tags', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Tags', 'wp-job-board' ),
 					'id'                => 'job_field_tags',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -997,7 +997,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Filter Title', 'wp-job-board' ),
 							'id'        => 'filter_title',
 							'type'      => 'text',
-							'default'	=> 'Job Tags'
+							'default'	=> 'Fund Tags'
 						),
 						array(
 							'name'      => __( 'Filter Placeholder', 'wp-job-board' ),
@@ -1008,7 +1008,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Location', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Location', 'wp-job-board' ),
 					'id'                => 'job_field_location',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -1098,7 +1098,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Apply Type', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Apply Type', 'wp-job-board' ),
 					'id'                => 'job_field_apply_type',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -1122,7 +1122,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Title', 'wp-job-board' ),
 							'id'        => 'title',
 							'type'      => 'text',
-							'default' => 'Job Apply Type',
+							'default' => 'Fund Apply Type',
 						),
 						array(
 							'name'      => __( 'Placeholder', 'wp-job-board' ),
@@ -1176,7 +1176,7 @@ class WP_Job_Board_Settings {
 					),
 				),
 				array(
-					'name'              => __( 'Field: Job Apply Email', 'wp-job-board' ),
+					'name'              => __( 'Field: Fund Apply Email', 'wp-job-board' ),
 					'id'                => 'job_field_apply_email',
 					'type'              => 'group',
 					'repeatable'  		=> false,
@@ -1200,7 +1200,7 @@ class WP_Job_Board_Settings {
 							'name'      => __( 'Title', 'wp-job-board' ),
 							'id'        => 'title',
 							'type'      => 'text',
-							'default' => 'Job Apply Email',
+							'default' => 'Fund Apply Email',
 						),
 						array(
 							'name'      => __( 'Placeholder', 'wp-job-board' ),

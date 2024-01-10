@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Job_Board_Post_Type_Job_Listing {
 	public static $prefix = WP_JOB_BOARD_JOB_LISTING_PREFIX;
 	public static function init() {
+		// add_action('init', array( __CLASS__, 'unregister_job_listing_post_type' ));
 	  	add_action( 'init', array( __CLASS__, 'register_post_type' ) );
 	  	add_action( 'admin_menu', array( __CLASS__, 'add_pending_count_to_menu' ) );
 	  	add_filter( 'cmb2_meta_boxes', array( __CLASS__, 'fields' ) );
@@ -55,21 +56,25 @@ class WP_Job_Board_Post_Type_Job_Listing {
 		add_action( 'wp_ajax_wp_job_board_ajax_mark_not_filled_job',  array(__CLASS__,'process_mark_not_filled_job') );
 	}
 
+	// public static function  unregister_job_listing_post_type() {
+	// 	unregister_post_type('job_listing');
+	// }
+
 	public static function register_post_type() {
 		$labels = array(
-			'name'                  => __( 'Jobsss', 'wp-job-board' ),
-			'singular_name'         => __( 'Job', 'wp-job-board' ),
-			'add_new'               => __( 'Add New Job', 'wp-job-board' ),
-			'add_new_item'          => __( 'Add New Job', 'wp-job-board' ),
-			'edit_item'             => __( 'Edit Job', 'wp-job-board' ),
-			'new_item'              => __( 'New Job', 'wp-job-board' ),
-			'all_items'             => __( 'All Jobs', 'wp-job-board' ),
-			'view_item'             => __( 'View Job', 'wp-job-board' ),
-			'search_items'          => __( 'Search Job', 'wp-job-board' ),
-			'not_found'             => __( 'No Jobs found', 'wp-job-board' ),
-			'not_found_in_trash'    => __( 'No Jobs found in Trash', 'wp-job-board' ),
+			'name'                  => __( 'Funds', 'wp-job-board' ),
+			'singular_name'         => __( 'Fund', 'wp-job-board' ),
+			'add_new'               => __( 'Add New Fund', 'wp-job-board' ),
+			'add_new_item'          => __( 'Add New Fund', 'wp-job-board' ),
+			'edit_item'             => __( 'Edit Fund', 'wp-job-board' ),
+			'new_item'              => __( 'New Fund', 'wp-job-board' ),
+			'all_items'             => __( 'All Fund', 'wp-job-board' ),
+			'view_item'             => __( 'View Fund', 'wp-job-board' ),
+			'search_items'          => __( 'Search Fund', 'wp-job-board' ),
+			'not_found'             => __( 'No Funds found', 'wp-job-board' ),
+			'not_found_in_trash'    => __( 'No Funds found in Trash', 'wp-job-board' ),
 			'parent_item_colon'     => '',
-			'menu_name'             => __( 'Jobs', 'wp-job-board' ),
+			'menu_name'             => __( 'Funds', 'wp-job-board' ),
 		);
 		$has_archive = true;
 		$job_archive = get_option('wp_job_board_job_archive_slug');
@@ -415,12 +420,13 @@ class WP_Job_Board_Post_Type_Job_Listing {
 			}
 			$fields[] = $field;
 		}
+		
 
 		$option = wp_job_board_get_option('job_field_apply_type');
 		$option = isset($option[0]) ? $option[0] : array();
 		if ( empty($option['enable']) || $option['enable'] == 'on' ) {
 			$field = array(
-				'name'              => !empty($option['title']) ? $option['title'] : __( 'Job Apply Type', 'wp-job-board' ),
+				'name'              => __( 'Fund Apply Type', 'wp-job-board' ),
 				'id'                => self::$prefix . 'apply_type',
 				'type'              => 'select',
 				'options'			=> array(
@@ -672,13 +678,13 @@ class WP_Job_Board_Post_Type_Job_Listing {
 		}
 		$fields = array_merge($c_fields, array(
 			'type' 				=> __( 'Type', 'wp-job-board' ),
-			'location' 			=> __( 'Location', 'wp-job-board' ),
+			// 'location' 			=> __( 'Location', 'wp-job-board' ),
 			'posted' 			=> __( 'Posted', 'wp-job-board' ),
 			'expires' 			=> __( 'Expires', 'wp-job-board' ),
 			'category' 			=> __( 'Category', 'wp-job-board' ),
 			'urgent' 			=> __( 'Urgent Job', 'wp-job-board' ),
 			'featured' 			=> __( 'Featured', 'wp-job-board' ),
-			'filled' 			=> __( 'Filled', 'wp-job-board' ),
+			// 'filled' 			=> __( 'Filled', 'wp-job-board' ),
 			'job_status' 		=> __( 'Status', 'wp-job-board' ),
 		));
 		return $fields;

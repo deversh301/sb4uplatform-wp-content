@@ -46,5 +46,32 @@ $footer = apply_filters( 'careerup_get_footer_layout', 'default' );
 	?>
 </div><!-- .site -->
 <?php wp_footer(); ?>
+<script>
+ 		jQuery(document).ready(function() {
+			var siteUrl = "<?php echo esc_url(home_url('/')); ?>";
+            // Target the anchor tag within the job-detail-thumbnail class
+            jQuery(".type-job_listing .left-inner .clearfix a").attr("href", siteUrl + "access-to-finance");
+			 jQuery(".type-job_listing .left-inner .clearfix .btn-link-job").html("View all Funds<span class='next flaticon-right-arrow'></span>");
+			// $(".btn-link-job").html("New View All Jobs HTML Content");
+			
+			jQuery(".type-job_listing .job-detail-statistic .statistic-item.flex-middle:eq(2)").css("display", "none");
+				var currentText = jQuery(".widget-title span").text().trim();
+
+				// Check if the current text is "Job Information"
+				if (currentText === "Job Information") {
+					// Replace the text content
+					jQuery(".widget-title span").text("Fund Information");
+				}
+
+				var otherText = jQuery(".in-sidebar ul li:first-child .details .text").text().trim();
+				// Check if the current text is "Job Information"
+				if (otherText === "Offered Salary") {
+					// Replace the text content
+					jQuery(".in-sidebar ul li:first-child .details .text").text("Investment Size");
+				}
+
+        });
+
+</script>
 </body>
 </html>

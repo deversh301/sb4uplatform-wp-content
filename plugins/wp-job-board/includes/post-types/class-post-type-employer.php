@@ -36,19 +36,19 @@ class WP_Job_Board_Post_Type_Employer {
 
 	public static function register_post_type() {
 		$labels = array(
-			'name'                  => __( 'Employers', 'wp-job-board' ),
-			'singular_name'         => __( 'Employer', 'wp-job-board' ),
-			'add_new'               => __( 'Add New Employer', 'wp-job-board' ),
-			'add_new_item'          => __( 'Add New Employer', 'wp-job-board' ),
-			'edit_item'             => __( 'Edit Employer', 'wp-job-board' ),
-			'new_item'              => __( 'New Employer', 'wp-job-board' ),
-			'all_items'             => __( 'All Employers', 'wp-job-board' ),
-			'view_item'             => __( 'View Employer', 'wp-job-board' ),
-			'search_items'          => __( 'Search Employer', 'wp-job-board' ),
-			'not_found'             => __( 'No Employers found', 'wp-job-board' ),
-			'not_found_in_trash'    => __( 'No Employers found in Trash', 'wp-job-board' ),
+			'name'                  => __( 'Companies', 'wp-job-board' ),
+			'singular_name'         => __( 'Company', 'wp-job-board' ),
+			'add_new'               => __( 'Add New Company', 'wp-job-board' ),
+			'add_new_item'          => __( 'Add New Company', 'wp-job-board' ),
+			'edit_item'             => __( 'Edit Company', 'wp-job-board' ),
+			'new_item'              => __( 'New Company', 'wp-job-board' ),
+			'all_items'             => __( 'All Companies', 'wp-job-board' ),
+			'view_item'             => __( 'View Company', 'wp-job-board' ),
+			'search_items'          => __( 'Search Company', 'wp-job-board' ),
+			'not_found'             => __( 'No Companies found', 'wp-job-board' ),
+			'not_found_in_trash'    => __( 'No Companies found in Trash', 'wp-job-board' ),
 			'parent_item_colon'     => '',
-			'menu_name'             => __( 'Employers', 'wp-job-board' ),
+			'menu_name'             => __( 'Companies', 'wp-job-board' ),
 		);
 		$has_archive = true;
 		$employer_archive = get_option('wp_job_board_employer_archive_slug');

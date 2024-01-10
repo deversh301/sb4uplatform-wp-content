@@ -13,12 +13,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class WP_Job_Board_Post_Type_Job_Alert {
 	public static function init() {
-	  	add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+	  	// add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+	  	add_action( 'init', array( __CLASS__, 'unregister_post_type' ) );
 	  	add_filter( 'cmb2_meta_boxes', array( __CLASS__, 'fields' ) );
 
 	  	add_filter( 'manage_edit-job_alert_columns', array( __CLASS__, 'custom_columns' ) );
 		add_action( 'manage_job_alert_posts_custom_column', array( __CLASS__, 'custom_columns_manage' ) );
 	}
+
+	public static function unregister_post_type() {
+        unregister_post_type('job_alert');
+    }
 
 	public static function register_post_type() {
 		$labels = array(

@@ -259,7 +259,7 @@ class WP_Job_Board_Abstract_Form {
 		$option = isset($option[0]) ? $option[0] : array();
 		if ( empty($option['enable']) || $option['enable'] == 'on' ) {
 			$field = array(
-				'name'              => !empty($option['title']) ? $option['title'] : __( 'Job Apply Type', 'wp-job-board' ),
+				'name'              => !empty($option['title']) ? $option['title'] : __( 'Fund Apply Type', 'wp-job-board' ),
 				'id'                => WP_JOB_BOARD_JOB_LISTING_PREFIX . 'apply_type',
 				'type'              => 'select',
 				'options'			=> array(

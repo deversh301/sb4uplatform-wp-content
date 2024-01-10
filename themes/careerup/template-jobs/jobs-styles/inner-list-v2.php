@@ -59,7 +59,7 @@ $longitude = WP_Job_Board_Job_Listing::get_post_meta( $post->ID, 'map_location_l
                 </div>
             </div>
             <div class="ali-right hidden-xs">
-                <a class="btn-gradient-theme" href="<?php echo esc_url( get_permalink() ) ?>"><span class="btn"><?php echo esc_html__('Browse Job','careerup') ?></span></a>
+                <a class="btn-gradient-theme" href="<?php echo esc_url( get_permalink() ) ?>"><span class="btn"><?php echo esc_html__('Fund Details','careerup') ?></span></a>
             </div>
         </div>
     </div>

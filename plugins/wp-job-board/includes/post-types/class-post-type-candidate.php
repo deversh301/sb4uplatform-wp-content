@@ -16,7 +16,8 @@ class WP_Job_Board_Post_Type_Candidate {
 	public static $prefix = WP_JOB_BOARD_CANDIDATE_PREFIX;
 
 	public static function init() {
-	  	add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+	  	// add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+	  	add_action( 'init', array( __CLASS__, 'unregister_post_type' ) );
 	  	add_action( 'admin_menu', array( __CLASS__, 'add_pending_count_to_menu' ) );
 
 	  	add_filter( 'cmb2_meta_boxes', array( __CLASS__, 'fields' ) );
@@ -48,6 +49,10 @@ class WP_Job_Board_Post_Type_Candidate {
 		add_action( 'denied_to_publish', array( __CLASS__, 'process_denied_to_publish' ) );
 		add_action( 'pending_to_publish', array( __CLASS__, 'process_pending_to_publish' ) );
 	}
+
+	public static function unregister_post_type() {
+        unregister_post_type('candidate');
+    }
 
 	public static function register_post_type() {
 		$labels = array(

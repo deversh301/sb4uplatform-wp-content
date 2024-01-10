@@ -19,12 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$salary_selected = !empty( $_GET['filter-salary-type'] ) ? $_GET['filter-salary-type'] : '';
 			?>
 			<div class="salary_types-wrapper circle-check">
-			<?php foreach ($salary_types as $salary_key => $text) { ?>
-				<div class="list-item">
-					<input type="radio" name="filter-salary-type" class="form-control" value="<?php echo esc_attr($salary_key); ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>_<?php echo esc_attr($salary_key); ?>" <?php checked($salary_selected, $salary_key); ?>>
-	                <label for="<?php echo esc_attr( $args['widget_id'] ); ?>_<?php echo esc_attr($salary_key); ?>"><?php echo esc_html($text); ?></label>
-				</div>
-			<?php } ?>
+			
 			</div>
 			<?php
 		}

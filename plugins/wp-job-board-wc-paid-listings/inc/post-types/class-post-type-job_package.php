@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Job_Board_Wc_Paid_Listings_Post_Type_Packages {
 
   	public static function init() {
-    	add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+    	// add_action( 'init', array( __CLASS__, 'register_post_type' ) );
+    	add_action( 'init', array( __CLASS__, 'unregister_post_type' ) );
 
     	add_action( 'cmb2_meta_boxes', array( __CLASS__, 'fields' ) );
 
@@ -23,6 +24,10 @@ class WP_Job_Board_Wc_Paid_Listings_Post_Type_Packages {
 
 		add_action('restrict_manage_posts', array( __CLASS__, 'filter_job_package_by_type' ));
   	}
+
+	  public static function unregister_post_type() {
+        unregister_post_type('job_package');
+    }
 
   	public static function register_post_type() {
 	    $labels = array(

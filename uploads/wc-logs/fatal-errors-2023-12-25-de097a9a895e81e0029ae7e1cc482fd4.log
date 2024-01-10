@@ -1,0 +1,167 @@
+2023-12-25T13:31:21+00:00 CRITICAL syntax error, unexpected token "function", expecting "(" in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 59
+
+2023-12-25T13:34:36+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class WP_Job_Board_Post_Type_Job_Listing does not have a method "unregister_job_listing_post_type" in C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\xampp\htdocs\sb4uplatform\wp-settings.php(643): do_action('init')
+#3 C:\xampp\htdocs\sb4uplatform\wp-config.php(97): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\sb4uplatform\wp-load.php(50): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(10): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php on line 324
+
+2023-12-25T13:59:22+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:05:12+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:06:59+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:08:36+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:10:13+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:11:23+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:12:36+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:13:00+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+
+2023-12-25T14:13:16+00:00 CRITICAL Uncaught TypeError: array_shift(): Argument #1 ($array) must be of type array, WP_Error given in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php:731
+Stack trace:
+#0 C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php(731): array_shift(Object(WP_Error))
+#1 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(326): WP_Job_Board_Post_Type_Job_Listing::custom_columns_manage('location')
+#2 C:\xampp\htdocs\sb4uplatform\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\sb4uplatform\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1398): do_action('manage_job_list...', 'location', 3480)
+#5 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1799): WP_Posts_List_Table->column_default(Object(WP_Post), 'location')
+#6 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(1432): WP_List_Table->single_row_columns(Object(WP_Post))
+#7 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(834): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#8 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-posts-list-table.php(810): WP_Posts_List_Table->_display_rows(Array, 0)
+#9 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1709): WP_Posts_List_Table->display_rows()
+#10 C:\xampp\htdocs\sb4uplatform\wp-admin\includes\class-wp-list-table.php(1636): WP_List_Table->display_rows_or_placeholder()
+#11 C:\xampp\htdocs\sb4uplatform\wp-admin\edit.php(503): WP_List_Table->display()
+#12 {main}
+  thrown in C:\xampp\htdocs\sb4uplatform\wp-content\plugins\wp-job-board\includes\post-types\class-post-type-job_listing.php on line 731
+

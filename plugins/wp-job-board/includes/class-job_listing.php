@@ -505,12 +505,12 @@ class WP_Job_Board_Job_Listing {
 				$apply_url = self::get_post_meta( $post_id, 'apply_url', true );
 				if ( !empty($apply_url) ) {
 					?>
-					<a href="<?php echo esc_url($apply_url); ?>" target="_blank" class="btn btn-apply btn-apply-job-external"><?php esc_html_e('Apply Now', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
+					<a href="<?php echo esc_url($apply_url); ?>" target="_blank" class="btn btn-apply btn-apply-job-external"><?php esc_html_e('Apply Fund', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
 					<?php
 				}
 			} elseif ( $apply_type == 'with_email' ) {
 				?>
-				<a href="#job-apply-email-form-wrapper-<?php echo esc_attr($post_id); ?>" class="btn btn-apply btn-apply-job-email" data-job_id="<?php echo esc_attr($post_id); ?>"><?php esc_html_e('Apply Now', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
+				<a href="#job-apply-email-form-wrapper-<?php echo esc_attr($post_id); ?>" class="btn btn-apply btn-apply-job-email" data-job_id="<?php echo esc_attr($post_id); ?>"><?php esc_html_e('Apply Fund', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
 				<!-- email apply form here -->
 				<?php
 				global $job_preview;
@@ -520,7 +520,7 @@ class WP_Job_Board_Job_Listing {
 			} else {
 				if ( !is_user_logged_in() || !WP_Job_Board_User::is_candidate() ) {
 					?>
-					<a href="javascript:void(0);" class="btn btn-apply btn-apply-job-internal-required"><?php esc_html_e('Apply Now', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
+					<a href="javascript:void(0);" class="btn btn-apply btn-apply-job-internal-required"><?php esc_html_e('Apply Fund', 'wp-job-board'); ?><i class="next flaticon-right-arrow"></i></a>
 					<?php
 					echo WP_Job_Board_Template_Loader::get_template_part('single-job_listing/apply-internal-required');
 				} else {
@@ -560,7 +560,6 @@ class WP_Job_Board_Job_Listing {
 			$text = esc_html__('Shortlist', 'wp-job-board');
 		}
 		?>
-		<a href="javascript:void(0);" class="btn <?php echo esc_attr($classes); ?>" data-job_id="<?php echo esc_attr($post_id); ?>" data-nonce="<?php echo esc_attr($nonce); ?>"><i class="pre flaticon-favorites"></i><span><?php echo trim($text); ?></span></a>
 		<?php
 	}
 

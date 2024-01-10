@@ -16,8 +16,13 @@ class WP_Job_Board_Taxonomy_Job_Location{
 	 *
 	 */
 	public static function init() {
-		add_action( 'init', array( __CLASS__, 'definition' ), 1 );
+		add_action( 'init', array( __CLASS__, 'unregister_taxonomy' ), 1 );
+		// add_action( 'init', array( __CLASS__, 'definition' ), 1 );
 	}
+
+	public static function unregister_taxonomy() {
+        unregister_taxonomy('job_listing_location');
+    }
 
 	/**
 	 *
